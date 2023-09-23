@@ -1,38 +1,127 @@
-.App {
+:root{
+  --card:#AEC3AE;
+  --card-deeper:#94A684;
+  --basicfont:'Tianshi-Yanti395ffe6dc8255a1';
+  --font2:'sfjyankaiti396070cbbb255a1';
+}
+
+body{
+  background-color: #E4E4D0;
+}
+
+
+.heroleaf{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.heroleaf button{
+  writing-mode: vertical-rl;
+  width: 28px;
+  height: 40px;
+  font-family:var(--basicfont) ;
+  border-style: none;
+  margin-right: 6px;
+  background-color: var(--card);
+  border-radius: 10%;
+}
+
+.heroleaf button:hover{
+  background-color: var(--card-deeper);
+}
+
+.heroleaf img{
+  border-radius: 1%;
+  margin: 3px 7px;
+  width: 20%;
+  height: auto;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.heroleaf img:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); 
+}
+
+.heroleaf .poem{
+  writing-mode: vertical-rl;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: larger;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.heroleaf h2{
+  font-family: 'Long Cang', cursive;
+  writing-mode: vertical-rl;
+  border-style:double;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.heronames{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row-reverse;
 }
 
-.App-link {
-  color: #61dafb;
+.heronames button{
+  font-family: 'Long Cang', cursive;
+  font-size: large;
+  writing-mode: vertical-rl;
+  text-align: center; /* 文字居中 */
+  width: 26px; /* 设置按钮宽度 */
+  height: 150px; /* 设置按钮高度，使之成为长条形 */
+  margin-top: 10px;
+  border-style: none;
+  margin-left: 5px;
+  background-color: var(--card);
+  color: rgb(1, 33, 9);
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heronames button:hover{
+  background-color: var(--card-deeper);
+}
+
+.title{
+  font-family:var(--font2);
+  text-align: center;
+}
+
+.intros{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.intros h1{
+  font-family: 'NTJianZhuan396219db3b255a1';
+  font-size:xx-large;
+}
+
+.proverb{
+  text-align: center;
+  font-family:'Tianshi-Yanti39624c8533255a1';
+}
+
+.poem {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.poem.visible {
+  opacity: 1;
+}
+.heroleaf button {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.heroleaf button.visible {
+  opacity: 1;
 }

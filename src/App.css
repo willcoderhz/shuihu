@@ -22,7 +22,7 @@ body{
   writing-mode: vertical-rl;
   width: 28px;
   height: 40px;
-  font-family:var(--basicfont) ;
+  font-family: 'Ma Shan Zheng', cursive;
   border-style: none;
   margin-right: 6px;
   background-color: var(--card);
@@ -100,13 +100,15 @@ body{
 }
 
 .intros h1{
-  font-family: 'NTJianZhuan396219db3b255a1';
+  font-family: 'New Tegomin', serif;
   font-size:xx-large;
 }
 
 .proverb{
   text-align: center;
-  font-family:'Tianshi-Yanti39624c8533255a1';
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: x-large;
+  font-weight: 500;
 }
 
 .poem {

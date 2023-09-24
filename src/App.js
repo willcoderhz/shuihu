@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HeroList from './components/HeroList';
 import HeroLeaflet from './components/HeroLeaflet';
 import Intro from './components/Intro';
+import Footer from './components/Footer';
 import './App.css'
 
 function App() {
@@ -48,10 +49,14 @@ function App() {
         "有钱可以通神——《水浒传·第九回》",
         "量大福也大，机深祸亦深。——《水浒传·第十九回》",
         "吃饭防噎，走路防跌。——《水浒传·第十回》",
-        "三寸气在千般用，一日无常万事休。——《水浒传·第二十一回》"
-
-
-
+        "三寸气在千般用，一日无常万事休。——《水浒传·第二十一回》",
+        "有缘千里来相会，无缘对面不相逢。——《水浒传·第十四回》",
+        "得之易，失之易。得之难，失之难。——《水浒传·第一百一十六回》",
+        "酒乱性，色迷人。——《水浒传·第四十五回》",
+        "饥不择食，寒不择衣，慌不择路，贫不择妻。——《水浒传·第三回》",
+        "乐极生悲，否极泰来。——《水浒传·第二十六回》",
+        "不怕官，只怕管。——《水浒传·第二回》",
+        "云生从龙，风生从虎。——《水浒传·第二十三回》"
         // ...其他名言
     ];
 
@@ -80,6 +85,7 @@ function App() {
             {showProverb && <p className='proverb'>{proverb}</p>}
             <HeroLeaflet hero={selectedHero} onClose={handleCloseHero} />
             <HeroList heroes={heroes} onSelectHero={handleSelectHero} />
+            <Footer/>
         </div>
     );
 }

@@ -61,8 +61,6 @@ body{
 }
 
 
-
-
 .heronames{
   display: flex;
   justify-content: center;
@@ -126,4 +124,73 @@ body{
 
 .heroleaf button.visible {
   opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--card);
+  color: #000000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: 'New Tegomin', serif;
+  font-size: 12px;
+}
+
+
+@media (max-width: 600px) {
+  .heronames {
+      flex-wrap: wrap; /* 允许多行展示，以适应小屏幕 */
+      justify-content: center; /* 在按钮之间添加一些空间 */
+  }
+  .heronames button {
+      width: 20px; /* 调整按钮宽度 */
+      height: 180px; /* 调整按钮高度 */
+      margin: 10px 4px; /* 添加一些间距，使按钮看起来不那么拥挤 */
+      font-size:smaller; /* 调整字体大小 */
+  }
+
+  .heroleaf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+  }
+
+  .heroleaf h2{
+    font-family: 'Long Cang', cursive;
+    writing-mode:initial;
+    border-style:double;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .heroleaf button{
+    writing-mode: initial;
+    width: 50px;
+    height: 30px;
+    font-family: 'Ma Shan Zheng', cursive;
+    border-style: none;
+    margin-top: 15px;
+    background-color: var(--card);
+    border-radius: 10%;
+  }
+
+  .heroleaf img{
+    width: 65%;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 390px){
+  .heronames button {
+    width: 20px; /* 调整按钮宽度 */
+    height: 180px; /* 调整按钮高度 */
+    margin: 10px 3px; /* 添加一些间距，使按钮看起来不那么拥挤 */
+    font-size:small; /* 调整字体大小 */
+}
 }

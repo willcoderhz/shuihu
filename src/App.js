@@ -3,10 +3,14 @@ import HeroList from './components/HeroList';
 import HeroLeaflet from './components/HeroLeaflet';
 import Intro from './components/Intro';
 import Footer from './components/Footer';
+import DisplayHero from './components/DisplayHeroButton';
+import DailyTarotReaderButton from './components/DailyTarotReaderButton';
+import TarotReading from './components/TarotReading';
 import './App.css'
 
 function App() {
     const [selectedHero, setSelectedHero] = useState(null);
+    const [activeComponent, setActiveComponent] = useState(null);
 
     const heroes = [
         { name: "及时雨宋江", leafletImgUrl: `${process.env.PUBLIC_URL}/image/songjiang.jpg`,poem:"自幼曾攻经史,长成亦有权谋,恰如猛虎卧荒丘,潜伏爪牙忍受,不幸刺文双颊,那堪配在江州,他年若得报冤仇,血染浔阳江口," },
@@ -79,12 +83,40 @@ function App() {
         setProverb(getRandomProverb());
     };
 
+    const handleDisplayHeroes = () => {
+        setActiveComponent('heroes');
+    };
+
+    const handleDisplayTarot = () => {
+        setActiveComponent('tarot');
+    };
+
     return (
         <div>
             <Intro/>
-            {showProverb && <p className='proverb'>{proverb}</p>}
-            <HeroLeaflet hero={selectedHero} onClose={handleCloseHero} />
-            <HeroList heroes={heroes} onSelectHero={handleSelectHero} />
+
+            <div className="buttons-container">
+                <DailyTarotReaderButton onClick={handleDisplayTarot} />
+                <DisplayHero onClick={handleDisplayHeroes} />
+            </div>
+            
+            <p className='proverb'>{proverb}</p>
+
+            {/* Two Independent Buttons */}
+            
+
+            {/* Conditionally render the hero list or the daily tarot reader */}
+            {activeComponent === 'heroes' && (
+                <>
+                    <HeroLeaflet hero={selectedHero} onClose={handleCloseHero} />
+                    <HeroList heroes={heroes} onSelectHero={handleSelectHero} />
+                </>
+            )}
+
+            {activeComponent === 'tarot' && (
+                <TarotReading /> 
+            )}
+
             <Footer/>
         </div>
     );

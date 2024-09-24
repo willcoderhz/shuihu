@@ -193,7 +193,7 @@ footer {
   perspective: 1000px;
   width: 250px;
   height: 400px;
-  margin-top: 55px;
+  margin-top: 35px;
 }
 
 .tarot-card {
@@ -264,35 +264,36 @@ footer {
   animation-delay: 1s;
 }
 
-.tarot-card-container:nth-child(1) .card-front {
+.card-1 .card-front {
   background-image: url(../public/image/cardback/background1.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.tarot-card-container:nth-child(2) .card-front {
+.card-2 .card-front {
   background-image: url(../public/image/cardback/background2.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.tarot-card-container:nth-child(3) .card-front {
+.card-3 .card-front {
   background-image: url(../public/image/cardback/background3.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.tarot-card-container:nth-child(4) .card-front {
+.card-4 .card-front {
   background-image: url(../public/image/cardback/background4.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.tarot-card-container:nth-child(5) .card-front {
+.card-5 .card-front {
   background-image: url(../public/image/cardback/background5.jpg);
   background-size: cover;
   background-position: center;
 }
+
 
 /* Hover effect */
 .tarot-card:hover {

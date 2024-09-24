@@ -1,9 +1,19 @@
 import React, { useEffect,useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-regular-svg-icons';
+import CardBack from './cardBack';
 
 function TarotCard({ onClick }) {
     const [flipped, setFlipped] = useState(false);
+    const [showAnalysis, setShowAnalysis] = useState(false);
+    
+    const handleBackClick = () => {
+        setShowAnalysis(true); // Show analysis window when back is clicked
+    };
+
+    const closeAnalysis = () => {
+        setShowAnalysis(false); // Close the analysis window
+    };
 
     const handleCardClick = () => {
         setFlipped(!flipped);
@@ -24,17 +34,29 @@ function TarotCard({ onClick }) {
     }, []); // 空依赖数组，确保只在组件挂载时执行一次
 
     return (
-        <div className={`tarot-card-container ${flipped ? 'flipped' : ''}`} onClick={handleCardClick}>
-            <div className="tarot-card">
-                {/* Front of the card */}
-                <div className="card-front">
-                </div>
-                {/* Back of the card */}
-                <div className="card-back">
-                    <h3>Your Tarot Reading</h3>
-                    <p>This is where the real content of the card will be displayed.</p>
+        <div className="tarot-card-wrapper">
+            <div className={`tarot-card-container ${flipped ? 'flipped' : ''}`} onClick={handleCardClick}>
+                <div className="tarot-card">
+                    {/* Front of the card */}
+                    <div className="card-front">
+                        {/* Front content (e.g., placeholder image or text) */}
+                    </div>
+
+                    {/* Back of the card */}
+                    <CardBack onClick={handleBackClick} />
                 </div>
             </div>
+
+            {/* Modal to display card analysis */}
+            {showAnalysis && (
+                <div className="analysis-modal">
+                    <div className="modal-content">
+                        <h3>Card Analysis</h3>
+                        <p>This card represents deep insights into your current situation...</p>
+                        <button onClick={closeAnalysis}>Close</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

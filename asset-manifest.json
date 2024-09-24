@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/shuihu/static/css/main.89660f70.css",
-    "main.js": "/shuihu/static/js/main.995b43b2.js",
+    "main.css": "/shuihu/static/css/main.896b8e26.css",
+    "main.js": "/shuihu/static/js/main.7f6f4448.js",
     "static/js/787.d2940903.chunk.js": "/shuihu/static/js/787.d2940903.chunk.js",
+    "static/media/background1.jpg": "/shuihu/static/media/background1.0ca31af676a8742a7f4d.jpg",
+    "static/media/background2.jpg": "/shuihu/static/media/background2.1b40cc89a8fd16752558.jpg",
+    "static/media/background3.jpg": "/shuihu/static/media/background3.de3ba6e1aa483749fe7a.jpg",
+    "static/media/background5.jpg": "/shuihu/static/media/background5.ccebe3319facda362528.jpg",
+    "static/media/background4.jpg": "/shuihu/static/media/background4.f95d2bd5dbf5e47e36f2.jpg",
     "index.html": "/shuihu/index.html",
-    "main.89660f70.css.map": "/shuihu/static/css/main.89660f70.css.map",
-    "main.995b43b2.js.map": "/shuihu/static/js/main.995b43b2.js.map",
+    "main.896b8e26.css.map": "/shuihu/static/css/main.896b8e26.css.map",
+    "main.7f6f4448.js.map": "/shuihu/static/js/main.7f6f4448.js.map",
     "787.d2940903.chunk.js.map": "/shuihu/static/js/787.d2940903.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89660f70.css",
-    "static/js/main.995b43b2.js"
+    "static/css/main.896b8e26.css",
+    "static/js/main.7f6f4448.js"
   ]
 }

@@ -139,6 +139,7 @@ footer {
   width: 100%;
   font-family: 'New Tegomin', serif;
   font-size: 12px;
+  z-index: -10;
 }
 
 .buttons-container {

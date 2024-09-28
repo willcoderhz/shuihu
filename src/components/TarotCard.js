@@ -5,15 +5,7 @@ import CardBack from './cardBack';
 
 function TarotCard({ onClick }) {
     const [flipped, setFlipped] = useState(false);
-    const [showAnalysis, setShowAnalysis] = useState(false);
     
-    const handleBackClick = () => {
-        setShowAnalysis(true); // Show analysis window when back is clicked
-    };
-
-    const closeAnalysis = () => {
-        setShowAnalysis(false); // Close the analysis window
-    };
 
     const handleCardClick = () => {
         setFlipped(!flipped);
@@ -43,20 +35,10 @@ function TarotCard({ onClick }) {
                     </div>
 
                     {/* Back of the card */}
-                    <CardBack onClick={handleBackClick} />
+                    <CardBack />
                 </div>
             </div>
 
-            {/* Modal to display card analysis */}
-            {showAnalysis && (
-                <div className="analysis-modal">
-                    <div className="modal-content">
-                        <h3>Card Analysis</h3>
-                        <p>This card represents deep insights into your current situation...</p>
-                        <button onClick={closeAnalysis}>Close</button>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }
